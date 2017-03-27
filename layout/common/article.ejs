@@ -32,6 +32,11 @@
             <%- post.content %>
         <% } %>
         </div>
+		<% if(!index && theme.donate && (post.donate || post.donate == undefined)){ %>
+			<div id="donate" style="text-align:center">
+			<%- partial('donate') %>
+			</div>
+		<% } %>
         <footer class="article-footer">
             <%- partial('share/index', { post: post }) %>
             <%- partial('comment/counter', { post: post }) %>
