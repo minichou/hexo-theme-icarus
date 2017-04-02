@@ -38,7 +38,9 @@
 			</div>
 		<% } %>
         <footer class="article-footer">
+            <% if ((post.share == undefined || post.share)) { %>
             <%- partial('share/index', { post: post }) %>
+            <% } %>
             <%- partial('comment/counter', { post: post }) %>
         </footer>
     </div>
