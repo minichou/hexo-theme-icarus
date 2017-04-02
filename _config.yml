@@ -1,0 +1,90 @@
+# Menus
+menu:
+  主页: .
+  归档: archives
+  分类: categories
+  #标签: tags
+  关于: about
+
+# Customize
+customize:
+    logo:
+        enabled: true
+        width: 40
+        height: 40
+        url: images/st.png
+    profile:
+        enabled: true # Whether to show profile bar
+        avatar: css/images/st.png
+        gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
+        author: MiniChou
+        author_title: Developer & Writer
+        location: Chengdu, China
+        follow: https://github.com/minichou
+    highlight: monokai
+    sidebar: right # sidebar position, options: false(no sidebar), true(eq right), left, right
+    thumbnail: true # enable posts thumbnail, options: true, false
+    favicon: css/images/st.png# path to favicon
+    social_links:
+        github: https://github.com/minichou
+        weibo: /
+        weixin: /
+        rss: http://minichou.github.io/atom.xml
+    social_link_tooltip: true # enable the social link tooltip, options: true, false
+
+# Widgets
+widgets:
+    - recent_posts
+    - category
+    - archive
+    #- tag
+    - tagcloud
+    - links
+
+# recent post number
+recentpost: 3
+
+# Search
+search:
+    insight: true # you need to install `hexo-generator-json-content` before using Insight Search
+    swiftype: # enter swiftype install key here
+    baidu: true # you need to disable other search engines to use Baidu search, options: true, false
+
+# Comment
+comment:
+    disqus: # enter disqus shortname here
+    duoshuo: mickolechou # enter duoshuo shortname here
+    youyan: # enter youyan uid here
+    facebook: # enter true to enable
+    isso: # enter the domain name of your own comment isso server eg. comments.example.com
+
+# Share
+share: bdshare # options: jiathis, bdshare, addtoany, default
+
+# Plugins
+plugins:
+    lightgallery: true # options: true, false
+    justifiedgallery: true # options: true, false
+    google_analytics: # enter the tracking ID for your Google Analytics
+    google_site_verification: # enter Google site verification code
+    baidu_analytics: # enter Baidu Analytics hash key
+    mathjax: false # options: true, false
+
+# Miscellaneous
+miscellaneous:
+    open_graph: # see http://ogp.me
+        fb_app_id:
+        fb_admins:
+        twitter_id:
+        google_plus:
+    links:
+        Hexo: http://hexo.io
+        GitHub: https://github.com
+        
+#是否开启打赏功能
+donate: true
+#打赏文案
+donate_message: 欣赏此文？求鼓励，求支持！
+
+#站长统计
+cnzz: 1261596704
