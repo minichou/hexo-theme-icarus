@@ -2,9 +2,46 @@
     <div class="layout-title">
         <span><%= page.title %></span>
     </div>
-    <div class="layout-wrap-inner tag-cloud">
+<!--    <div class="layout-wrap-inner tag-cloud">
         <% if(site.tags.length) { %>
-            <%- tagcloud({min_font: 14, max_font: 28}) %>
+        <%- tagcloud({min_font: 14, max_font: 28}) %>
         <% } %>
+    </div>-->
+
+
+    <!-- 标签云 -->
+    <div id='list-tags' class="layout-wrap-inner list-tags">
+        <% site.tags.map(function(tag){ %>
+        <!--通过锚点定位-->
+        <!--<a href="#<%= tag.name %>" title="<%= tag.name %>" rel="<%= tag.length %>"><%= tag.name %></a>-->
+        <!--通过连接定位-->
+        <a href="<%= tag.name %>/" title="<%= tag.name %>" rel="<%= tag.length %>"><%= tag.name %></a>
+        <% }) %>
+    </div>
+
+
+    <!-- 标签列表 -->
+    <div class="timeline timeline-wrap">
+        <% site.tags.map(function(tag){ %>
+        <div class="timeline-row timeline-row-major">
+            <span class="node"><i class="fa fa-tag"></i></span>
+            <h1 class="title" id="<%= tag.name %>">#<%= tag.name %></h1>
+        </div>
+
+        <% tag.posts.map(function(post){ %>
+        <div class="timeline-row">
+            <span class="node"></span>
+            <div class="content">
+                <%- partial('common/post/title', { post: post, index: true, class_name: 'timeline-article-title' }) %>
+                <div class="article-meta">
+                    <%- partial('common/post/date', { post: post, class_name: 'article-date', date_format: null }) %>
+                    <%- partial('common/post/category', { post: post }) %>
+                    <%- partial('common/post/tag', { post: post }) %>
+                </div>
+            </div>
+        </div>
+        <% }); %>
+
+        <% }); %>
     </div>
 </section>

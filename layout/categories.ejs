@@ -4,7 +4,45 @@
     </div>
     <div class="layout-wrap-inner list-categories">
         <% if(site.categories.length) { %>
-            <%- list_categories(site.categories) %>
+        <%- list_categories(site.categories) %>
         <% } %>
     </div>
+
+    <!-- 目录 -->
+<!--
+    <div class="layout-wrap-inner list-categories">
+        <% site.categories.map(function(category){ %>
+        <a href="#<%= category.name %>" title="<%= category.name %>" rel="<%= category.length %>"><%= category.name
+            %></a>
+        <% }) %>
+    </div>
+-->
+
+
+    <!-- 目录列表 -->
+
+    <div class="timeline timeline-wrap">
+        <% site.categories.map(function(category){ %>
+        <div class="timeline-row timeline-row-major">
+            <span class="node"><i class="fa fa-folder"></i></span>
+            <h1 class="title" id="<%= category.name %>"><%= category.name %></h1>
+        </div>
+
+        <% category.posts.map(function(post){ %>
+        <div class="timeline-row">
+            <span class="node"></span>
+            <div class="content">
+                <%- partial('common/post/title', { post: post, index: true, class_name: 'timeline-article-title' }) %>
+                <div class="article-meta">
+                    <%- partial('common/post/date', { post: post, class_name: 'article-date', date_format: null }) %>
+                    <%- partial('common/post/category', { post: post }) %>
+                    <%- partial('common/post/tag', { post: post }) %>
+                </div>
+            </div>
+        </div>
+        <% }); %>
+
+        <% }); %>
+    </div>
+
 </section>
