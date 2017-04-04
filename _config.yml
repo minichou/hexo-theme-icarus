@@ -1,10 +1,20 @@
 # Menus
 menu:
-  主页: .
-  归档: archives
-  分类: categories
-  标签: tags
-  关于: about
+  Home: .
+  Archives: archives
+  Categories: categories
+  Tags: tags
+  About: about
+
+#Menus icon
+menu_icon:
+  Home: home
+  Archives: archive
+  Categories: folder
+  Tags: tags
+  About: user
+
+
 
 # Customize
 customize:
@@ -53,8 +63,8 @@ search:
 # Comment
 comment:
     disqus: #minichou-github-io # enter disqus shortname here
-    duoshuo: #mickolechou # enter duoshuo shortname here
-    youyan: 2129839 # enter youyan uid here
+    duoshuo: mickolechou # enter duoshuo shortname here
+    youyan: #2129839 # enter youyan uid here
     facebook: # enter true to enable
     isso: # enter the domain name of your own comment isso server eg. comments.example.com
     cloudtie: #be47dfd808a14df38e23e9c9dd8e8e27

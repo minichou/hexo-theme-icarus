@@ -1,3 +1,9 @@
+Home: 'Home'
+Archives: 'Archives'
+Categories: 'Categories'
+Tags: 'Tags'
+About: 'About'
+
 index:
     home: 'home'
     search: 'Search'
